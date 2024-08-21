@@ -10,7 +10,7 @@ import Nopage from './pages/Nopage'
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename='/techdivinelyapp/'>
         <Routes>
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
