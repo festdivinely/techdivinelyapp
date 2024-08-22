@@ -4,10 +4,10 @@ const Signup = () => {
     return (
         <div className="relative w-full h-screen bg-gray-900">
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div className="absolute inset-0 bg-black opacity-50"></div>
 
             {/* Signup Component */}
-            <section className="relative flex items-center justify-center w-full h-full z-20">
+            <section className="relative flex items-center justify-center w-full h-full">
                 <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6 space-y-4 md:space-y-6">
                     <h1 className="text-xl font-bold leading-tight text-gray-900 md:text-2xl dark:text-white">
                         Create an account
