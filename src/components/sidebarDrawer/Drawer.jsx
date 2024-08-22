@@ -5,13 +5,14 @@ import { IoMdContact } from "react-icons/io";
 import { AiOutlineLogin } from "react-icons/ai";
 import { PiSignIn } from "react-icons/pi";
 
+
 function Drawer() {
     return (
         <div className='block md:hidden'>
             <div className="drawer">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
-                    {/* Page content here */}
+                    {/* Page content here */} 
                     <label htmlFor="my-drawer" className="drawer-button">
                         <IoMdMenu className="text-3xl" />
                     </label>

@@ -5,13 +5,18 @@ import { AiOutlineLogin } from "react-icons/ai";
 import { PiSignIn } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import Drawer from '../sidebarDrawer/Drawer';
+import { useHomeStore } from '../../store';
 
 const Navbar = () => {
+    const setlogin = useHomeStore((state) => state.setLogin)
+    const setsignup = useHomeStore((state) => state.setSignup)
+    const setlanding = useHomeStore((state) => state.setLanding)
+    
     return (
         <div>
             <div className="navbar bg-slate-100 p-0 mt-0">
                 <Drawer />
-                <div className="flex-1">
+                <div className="flex-1" onClick={setlanding}>
                     <Link to="/home" className="btn btn-ghost text-2xl">daisyUI</Link>
                 </div>
                 <div className="flex-none">
@@ -23,10 +28,10 @@ const Navbar = () => {
                             <Link to="/contact" className="text-xl"><div><IoMdContact /></div> Contact</Link>
                         </li>
                         <li className="hidden md:block items-center space-x-2">
-                            <a className="text-xl"><div><AiOutlineLogin /></div> Login</a>
+                            <a className="text-xl" onClick={setlogin}><div><AiOutlineLogin /></div> Login</a>
                         </li>
                         <li className="hidden md:block items-center space-x-2">
-                            <a className="text-xl"><div><PiSignIn /></div> Sign Up</a>
+                            <a className="text-xl" onClick={setsignup}><div><PiSignIn /></div> Sign Up</a>
                         </li>
                         <li>
                             <details>
